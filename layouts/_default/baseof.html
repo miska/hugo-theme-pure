@@ -3,10 +3,7 @@
   <head>
     <title>
       {{- block "title" . -}}
-      {{ if .IsPage }}
-        {{ .Title }} - {{ .Site.Title }}
-      {{ else}}
-        {{ .Site.Title}}{{ end }}
+      {{ if .IsPage }}{{ .Title }} - {{ .Site.Title }}{{ else}}{{ .Site.Title}}{{ end }}
       {{- end -}}
     </title>
     {{ partial "head.html" . }}

@@ -31,11 +31,6 @@
 
     <!-- Site Generator -->
     <meta name="generator" content="Hugo {{ .Site.Hugo.Version }} with theme pure" />
-    <title>
-      {{- block "title" . -}}
-      {{ if .IsPage }}{{ .Title }} - {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}
-      {{- end -}}
-    </title>
     <!-- Canonical links -->
     {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
