@@ -109,6 +109,7 @@ params:
     social:
       links:
         github: https://github.com/xiaoheiAh
+        link_keybase: https://keybase.io/example
         # weibo: http://weibo.com/{yourid}
         # twitter: https://twitter.com/
         # facebook: /
