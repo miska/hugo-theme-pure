@@ -1,7 +1,7 @@
 <a href="{{- .Permalink }}" class="collection-item" itemprop="url" target="_blank">
-    {{- if .Date }}
-    <time datetime="{{ .Date }}" itemprop="datePublished" style="margin-right: 5px;">
-        {{- .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}
+    {{- if .PublishDate }}
+    <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05 -0700" }}" itemprop="datePublished" style="margin-right: 5px;">
+        {{- .PublishDate.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}
     </time>
     {{- end }}
     {{- .Title }}

@@ -1,7 +1,7 @@
 <article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
     <div class="panel-body">
         <div class="article-meta">
-            <time datetime="{{ .Date }}"
+            <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05 -0700" }}"
                 itemprop="datePublished">{{- .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}</time>
         </div>
         <h3 class="article-title" itemprop="name">
