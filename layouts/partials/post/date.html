@@ -2,7 +2,7 @@
 <span class="article-date">
   <i class="icon icon-calendar-check"></i>&nbsp;
 <a href="{{- .Permalink }}" class="{{ .Scratch.Get "class_name" }}">
-  <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05 -0700" }}" itemprop="datePublished">{{- .PublishDate.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}</time>
+  <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05-07:00" }}" itemprop="datePublished">{{- .PublishDate.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}</time>
 </a>
 </span>
 {{ end }}
