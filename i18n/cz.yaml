@@ -1,0 +1,173 @@
+
+nav_all:
+  other: Vše
+nav_older:
+  other: Starší
+nav_newer:
+  other: Novější
+
+
+page_home:
+  other: Domů
+page_archive:
+  other: Archiv
+page_archives:
+  other: Archivy
+page_category:
+  other: Kategorie
+page_categories:
+  other: Kategorie
+page_tag:
+  other: Tag
+page_tags:
+  other: Tagy
+page_tagcloud:
+  other: Tag Cloud
+page_about:
+  other: About
+
+pagination_next:
+  other: Další
+pagination_prev:
+  other: Předchozí
+pagination_page:
+  other: Strana %d
+pagination_pageof:
+  other: Strana %d z %s
+
+widget_search:
+  other: Hledat
+widget_board:
+  other: Nástěnka
+widget_archive:
+  other: Archiv
+widget_tags:
+  other: Tagy
+widget_categories:
+  other: Kategorie
+widget_tagcloud:
+  other: Tag Cloud
+widget_recent_posts:
+  other: Nedávné příspěvky
+
+
+profile_follow:
+  other: Sledovat
+profile_skill:
+  other: Schopnosti
+profile_label:
+  other: Štítky
+profile_work:
+  other: Práce
+profile_project:
+  other: Projekty
+profile_link:
+  other: Odkazy
+
+insight_hint:
+  other: Napište něco...
+insight_posts:
+  other: Příspěvky
+insight_pages:
+  other: Stránky
+insight_categories:
+  other: Kategorie
+insight_tags:
+  other: Tagy
+insight_untitled:
+  other: (Nepojmenováno)
+
+
+unit_word:
+  other: " slov"
+unit_time:
+  other: " minut"
+
+article_wordcount:
+  other: "Počet slov: "
+article_readcount:
+  other: "Doba čtení: "
+article_more:
+  other: Přečíst více
+article_comments:
+  other: Komentáře
+article_share:
+  other: Sdílet
+article_catalogue:
+  other: Katalog
+
+total_article:
+  one: Celkem {{ .Count }} článek
+  other: Celkem {{ .Count }} článků
+total_tag:
+  other: Total {{ .Count }} tags
+total_category:
+  one: Total {{ .Count }} category
+  other: Total {{ .Count }} categories
+total_link:
+  other: Total {{ .Count }} link
+  other: Total {{ .Count }} links
+total_repository:
+  other: Total {{ .Count }} projects
+
+
+donate_qrcode_alt:
+  other: Scan Qrcode
+donate_qrcode_title:
+  other: Scan
+donate_button:
+  other: $
+donate_title:
+  other: Maybe you could buy me a cup of coffee.
+donate_tip:
+  other: Scan this qrcode
+donate_alipay_action_tip:
+  other: Open alipay app scan this qrcode, buy me a coffee!
+donate_wechatpay_action_tip:
+  other: Open wechat app scan this qrcode, buy me a coffee!
+donate_alipay:
+  other: alipay
+donate_wechatpay:
+  other: wechat payment
+
+
+comment:
+  other: Komentovat
+tweets:
+  other: Tweety
+share:
+  other: Sdílet
+rss_feed:
+  other: RSS Feed
+
+
+copyright_theme_by:
+  other: Téma od
+copyright_base_on:
+  other: založeno na
+copyright_powered_by:
+  other: Pohání
+copyright_post:
+  other: Permalink
+copyright_license:
+  other: Licence
+
+insight_hint: 
+  other: Napište něco...
+insight_posts: 
+  other: Příspěvky
+insight_pages: 
+  other: Stránky
+insight_categories:
+  other: Kategorie
+insight_tags:
+  other: Tagy
+insight_untitled:
+  other: (Nepojmenováno)
+
+page_not_found_heading:
+  other: 404 Nenalezeno
+page_not_found_body:
+  other: The page you are looking for might have been removed, had its name changed or is temporarily unavailable.
+page_not_found_back:
+  other: Jít zpět
