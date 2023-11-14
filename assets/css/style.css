@@ -3025,6 +3025,11 @@ button.close {
   border-top-color: #000;
 }
 
+div.imageblock.right {
+  float: right;
+  padding: 10px;
+}
+
 .tooltip.right .tooltip-arrow {
   top: 50%;
   left: 0;
