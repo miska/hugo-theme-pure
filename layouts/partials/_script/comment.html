@@ -50,4 +50,9 @@
     });
     gitalk.render('comments');
 </script>
+{{- else if eq $comment.type "gts" }}
+<script type="text/javascript">
+    var comments = document.getElementsById("gts_comments")
+    var content = document.getElementsByClassName("toot")
+</script>
 {{- end }}

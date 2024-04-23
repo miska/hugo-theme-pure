@@ -17,6 +17,8 @@
 
     {{- else if eq $comment.type "valine" }}
     <div id="vcomments"></div>
+    {{- else if eq $comment.type "gts" }}
+    <div id="gts_comments"></div>
     {{- end }}
 </section>
 {{- end }}

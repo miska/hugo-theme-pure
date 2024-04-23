@@ -20,7 +20,7 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement">
         <ul class="nav navbar-nav main-nav {{- with .Site.Params.config.menu_highlight }}  menu-highlight {{- end}}">
           {{- $icon := .Site.Params.menuIcons }}
           {{- range .Site.Menus.main -}}
