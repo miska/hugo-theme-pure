@@ -2,6 +2,7 @@
     <meta name="renderer" content="webkit">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no,email=no,adress=no">
     <!-- Color theme for statusbar -->
     <meta name="theme-color" content="#000000" />
@@ -47,6 +48,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     {{- end }}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+    {{- if and (isset .Site.Params "site") (isset .Site.Params.site "favicon") }}
+    <link rel="icon" type="image/x-icon" href="{{ .Site.Params.site.favicon | absURL }}">
+    {{- end }}
     {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158 */}}
     {{- template "_internal/opengraph.html" . -}}
     {{- template "_internal/twitter_cards.html" . -}}
