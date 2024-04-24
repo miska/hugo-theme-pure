@@ -36,7 +36,7 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
     {{- if isset .Site.Params "main_site" -}}
-    {{ printf `<link rel="canonical" href="%s%s"/>` .Site.Params.main_site .RelPermalink | safeHTML }}
+    <link rel="canonical" href="{{ replaceRE .Site.BaseURL .Site.Params.main_site .Permalink }}"/>
     {{- end -}}
     {{ $css := resources.Get "css/style.css" | minify | fingerprint}}
     <link rel="stylesheet" href="{{ $css.Permalink }}">
