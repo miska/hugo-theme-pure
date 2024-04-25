@@ -2,7 +2,7 @@
 {{- with $social }}
 <ul class="social-links">
     {{- range $name,$url := $social.links }}
-        {{- if hasPrefix $name "link" }}
+        {{- if hasPrefix $name "link_" }}
     <li><a href="{{- $url | absURL }}" rel="me" target="_blank" title="{{- substr $name 5 }}" data-toggle=tooltip data-placement=top >
             <i class="icon icon-link"></i></a></li>
         {{- else }}
