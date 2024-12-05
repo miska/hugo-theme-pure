@@ -6,6 +6,9 @@
     <meta name="format-detection" content="telephone=no,email=no,adress=no">
     <!-- Color theme for statusbar -->
     <meta name="theme-color" content="#000000" />
+    {{- if and (and (.Site.Params.profile) (.Site.Params.profile.enabled)) (.Site.Params.profile.fediverse) }}
+    <meta name="fediverse:creator" content="{{ .Site.Params.profile.fediverse }}">
+    {{- end }}
     <!-- baidu & google verification  -->
     {{ with .Site.Params.baiduVerification }}
     <meta name="baidu-site-verification" content="{{.}}" />{{ end }}
