@@ -4,10 +4,14 @@
     {{- range $name,$url := $social.links }}
         {{- if hasPrefix $name "link_" }}
     <li><a href="{{- $url | absURL }}" rel="me" target="_blank" title="{{- substr $name 5 }}" data-toggle=tooltip data-placement=top >
-            <i class="icon icon-link"></i></a></li>
+            <i class="fa-solid fa-link"></i></a></li>
         {{- else }}
     <li><a href="{{- $url | absURL }}" rel="me" target="_blank" title="{{- $name }}" data-toggle=tooltip data-placement=top >
-            <i class="icon icon-{{lower $name}}"></i></a></li>
+            {{- if hasPrefix $name "rss" }}
+            <i class="fa-solid fa-rss"></i></a></li>
+            {{- else }}
+            <i class="fa-brands fa-{{lower $name}}"></i></a></li>
+            {{- end }}
         {{- end }}
     {{- end }}
 </ul>

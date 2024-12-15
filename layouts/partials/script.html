@@ -5,10 +5,14 @@
 <script>
     window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+{{- if isset .Site.Params "highlightjs" }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js">
+</script>
+{{- if isset .Site.Params.highlightjs "langs" }}
 {{- range .Site.Params.highlightjs.langs }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/{{.}}.min.js" defer></script>
 {{- end -}}
+{{- end }}
 <script>
     hljs.configure({
         tabReplace: '    ', // 4 spaces
@@ -17,6 +21,7 @@
     })
     hljs.initHighlightingOnLoad();
 </script>
+{{- end }}
 {{- $appjs := resources.Get "js/application.js" | resources.Minify | resources.Fingerprint}}
 <script src="{{- $appjs.Permalink }}"></script>
 {{- $plugin := resources.Get "js/plugin.js" | resources.Minify | resources.Fingerprint}}

@@ -9,7 +9,7 @@
           </a>
           <h2 id="name" class="hidden-xs hidden-sm">{{- $profile.author }}</h2>
           <h3 id="title" class="hidden-xs hidden-sm hidden-md">{{- $profile.author_title }}</h3>
-          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> {{- $profile.location }}</small>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="fa-solid fa-map-marker"></i>&nbsp; {{- $profile.location }}</small>
         </div>
         {{- end }}
         {{- partial "search.html" . }}
@@ -30,7 +30,7 @@
                   {{- with $icon.enable }}
                   {{- range $name,$value := $icon}}
                     {{- if eq $name $lowerItemName }}
-                    <i class="icon {{- print " " $value }}"></i>
+                    <i class="fa-solid {{- print " " $value }}"></i>
                     {{- end}}
                   {{- end }}
                   {{- end}}
