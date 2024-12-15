@@ -23,9 +23,9 @@ function tagCloud(where, min, max) {
     if(iMax < weight) iMax = weight;
     if(iMin > weight || iMin == 0) iMin = weight;
   });
-  let step = (max - min)/(iMax - iMin);
+  let step = (max - min)/Math.log(iMax - iMin + 1);
   $(where).each(function() {
-    let weight = $(this).attr("rel") - iMin;
+    let weight = Math.log($(this).attr("rel") - iMin + 1);
     $(this).css({"font-size": min + (weight * step) + 'px'});
   });
 };
