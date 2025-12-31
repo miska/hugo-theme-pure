@@ -105,7 +105,7 @@ total_category:
   one: Total {{ .Count }} category
   other: Total {{ .Count }} categories
 total_link:
-  other: Total {{ .Count }} link
+  one: Total {{ .Count }} link
   other: Total {{ .Count }} links
 total_repository:
   other: Total {{ .Count }} projects
@@ -151,19 +151,6 @@ copyright_post:
   other: Permalink
 copyright_license:
   other: License
-
-insight_hint: 
-  other: Type something...
-insight_posts: 
-  other: Posts
-insight_pages: 
-  other: Pages
-insight_categories:
-  other: Categories
-insight_tags:
-  other: Tags
-insight_untitled:
-  other: (Untitled)
 
 page_not_found_heading:
   other: 404 Not Found
