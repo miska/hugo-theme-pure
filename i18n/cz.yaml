@@ -152,19 +152,6 @@ copyright_post:
 copyright_license:
   other: Licence
 
-insight_hint: 
-  other: Napište něco...
-insight_posts: 
-  other: Příspěvky
-insight_pages: 
-  other: Stránky
-insight_categories:
-  other: Kategorie
-insight_tags:
-  other: Tagy
-insight_untitled:
-  other: (Nepojmenováno)
-
 page_not_found_heading:
   other: 404 Nenalezeno
 page_not_found_body:
