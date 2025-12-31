@@ -105,8 +105,8 @@ total_category:
   one: Total {{ .Count }} category
   other: Total {{ .Count }} categories
 total_link:
-  other: Total {{ .Count }} link
-  other: Total {{ .Count }} links
+  one: Celkem {{ .Count }} link
+  other: Celkem {{ .Count }} linků
 total_repository:
   other: Total {{ .Count }} projects
 
