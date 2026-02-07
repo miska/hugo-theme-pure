@@ -6523,6 +6523,11 @@ body.no-sidebar .sidebar {
   font-size: 18px;
 }
 
+.article-list .article-entry h2 {
+  font-size: 16px;
+}
+
+
 .article-toc .toc-title {
   font-size: 18px;
   color: #000;
