@@ -1,7 +1,7 @@
 <header class="header" itemscope itemtype="http://schema.org/WPHeader">
     <div class="slimContent">
       <div class="navbar-header">
-        {{- if and (.Site.Params.profile) (.Site.Params.profile.enabled)}}
+        {{- if (.Site.Params.profile)}}
         {{- $profile := .Site.Params.profile }}
         <div class="profile-block text-center">
           <a id="avatar" href="{{- $profile.follow }}" target="{{ cond (eq $profile.follow "/") "" "_blank" }}">
