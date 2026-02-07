@@ -1,7 +1,12 @@
 {{- $comment := .Site.Params.comment}}
+{{- $params := .Page.Params }}
 {{- with $comment }}
 <section id="comments">
-    {{- if eq $comment.type "disqus" }}
+    {{- if eq $comment.type "mastodon" }}
+        {{- if $params.mastodon }}
+    <div id="mastodon">💬 Discuss on <a target="_blank_" href="{{ $params.mastodon }}">Mastodon</a> <i class="fa-brands fa-mastodon"></i></div>
+        {{- end }}
+    {{- else if eq $comment.type "disqus" }}
     <div id="disqus_thread">
         <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
