@@ -4,7 +4,7 @@
 <section id="comments">
     {{- if eq $comment.type "mastodon" }}
         {{- if $params.mastodon }}
-    <div id="mastodon">💬 Discuss on <a target="_blank_" href="{{ $params.mastodon }}">Mastodon</a> <i class="fa-brands fa-mastodon"></i></div>
+    <div id="mastodon"><a target="_blank_" href="{{ $params.mastodon }}">💬 Discuss on Mastodon <i class="fa-brands fa-mastodon"></i></a></div>
         {{- end }}
     {{- else if eq $comment.type "disqus" }}
     <div id="disqus_thread">
