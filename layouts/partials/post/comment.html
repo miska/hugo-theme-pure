@@ -2,7 +2,61 @@
 {{- $params := .Page.Params }}
 {{- with $comment }}
 <section id="comments">
-    {{- if eq $comment.type "mastodon" }}
+    {{- if eq $comment.type "gotosocial" }}
+        {{- if $params.mastodon }}
+    <div id="mastodon"><a target="_blank_" href="{{ $params.mastodon }}">💬 Discuss on Mastodon <i class="fa-brands fa-mastodon"></i></a></div>
+    <div id="mastodon-thread"></div>
+    <script>
+        async function update_comments() {
+            let doc = await fetch("{{ $params.mastodon }}").then(response => response.text());
+            let parser = new DOMParser();
+            let html = parser.parseFromString(doc, 'text/html').getElementsByClassName("thread-replies")[0];
+            document.getElementById("mastodon-thread").innerHTML = html.innerHTML;
+        }
+        update_comments();
+    </script>
+    <style>
+        #mastodon-thread .replies a {
+            display: none;
+        }
+        #mastodon-thread article {
+            text-align: left;
+        }
+        #mastodon-thread .username,summary {
+            display: none;
+        }
+        #mastodon-thread .stats-grouping .stats-grouping {
+            display: none;
+        }
+        #mastodon-thread .p-author {
+            width: 150px;
+            float: left;
+            margin-right: 10px;
+        }
+        #mastodon-thread article {
+            clear: both;
+        }
+        #mastodon-thread .indent-1 {
+            margin-left: 20px;
+        }
+        #mastodon-thread .indent-2 {
+            margin-left: 40px;
+        }
+        #mastodon-thread .indent-3 {
+            margin-left: 60px;
+        }
+        #mastodon-thread .indent-4 {
+            margin-left: 80px;
+        }
+        #mastodon-thread .author-strap {
+            text-align: center;
+        }
+        #mastodon-thread .stats-item .text-cutoff {
+            text-align: right;
+        }
+    </style>
+        {{- end }}
+    {{- else if eq $comment.type "mastodon" }}
         {{- if $params.mastodon }}
     <div id="mastodon"><a target="_blank_" href="{{ $params.mastodon }}">💬 Discuss on Mastodon <i class="fa-brands fa-mastodon"></i></a></div>
         {{- end }}
