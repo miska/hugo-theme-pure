@@ -22,7 +22,7 @@
       </div>
       {{ else if .Summary }}
       <div class="article-entry text-muted" itemprop="description">
-        {{ .Summary }}
+        {{- .Summary | replaceRE `(?s)(<h[1-6][^>]*>.*)` "" | plainify -}}
       </div>
       {{- end }}
       <p class="article-meta">
