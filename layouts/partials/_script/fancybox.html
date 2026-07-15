@@ -1,0 +1,76 @@
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<style>
+  .article-entry figure.image-wrapper {
+    width: fit-content;
+    max-width: 100%;
+    margin: 1.2em auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  }
+  .article-entry figure.image-wrapper img {
+    display: block;
+    margin: 0 auto;
+    cursor: zoom-in;
+    border-radius: 2px;
+  }
+  .article-entry figure.image-wrapper figcaption {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 8px;
+    font-style: italic;
+    line-height: 1.4;
+  }
+</style>
+<script>
+(function() {
+    var content = document.querySelector('.article-entry');
+    if (!content) return;
+
+    content.querySelectorAll('img').forEach(function(img) {
+        if (img.parentElement.tagName === 'A') return;
+        if (img.closest('a')) return;
+
+        var caption = '';
+        var imageblock = img.closest('.imageblock');
+        if (imageblock) {
+            var captionEl = imageblock.querySelector('.caption');
+            if (captionEl) {
+                caption = captionEl.textContent.trim();
+                captionEl.remove();
+            }
+            if (imageblock.classList.contains('right')) {
+                imageblock.style.float = 'none';
+            }
+        }
+        if (!caption) caption = img.alt || '';
+
+        var parent = img.parentNode;
+        var figure = document.createElement('figure');
+        figure.className = 'image-wrapper';
+
+        var link = document.createElement('a');
+        link.href = img.src;
+        link.setAttribute('data-glightbox', 'title: ' + caption);
+        link.appendChild(img);
+
+        figure.appendChild(link);
+
+        if (caption) {
+            var figcaption = document.createElement('figcaption');
+            figcaption.textContent = caption;
+            figure.appendChild(figcaption);
+        }
+
+        parent.appendChild(figure);
+    });
+
+    GLightbox({
+        selector: '.article-entry a[data-glightbox]',
+        touchNavigation: true,
+        loop: true,
+        preload: true
+    });
+})();
+</script>
